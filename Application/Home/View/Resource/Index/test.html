@@ -1,0 +1,90 @@
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>JS字幕打字效果</title>
+		<style type="text/css">
+			body {
+				font-family: Arial;
+				margin-top: 0px;
+				background-repeat: no-repeat;
+				padding-top: 100px;
+			}
+			
+			#myContent,
+			#myContent blink {
+				width: 500px;
+				height: 200px;
+				background: black;
+				color: #00FF00;
+				font-family: courier;
+			}
+			
+			blink {
+				display: inline;
+			}
+		</style>
+		<script type="text/javascript">
+			var charIndex = -1;
+			var stringLength = 0;
+			var inputText;
+
+			function writeContent(init) {
+				if(init) {
+					inputText = document.getElementById('contentToWrite').innerHTML;
+				}
+				if(charIndex == -1) {
+					charIndex = 0;
+					stringLength = inputText.length;
+				}
+				var initString = document.getElementById('myContent').innerHTML;
+				initString = initString.replace(/<SPAN.*$/gi, "");
+
+				var theChar = inputText.charAt(charIndex);
+				var nextFourChars = inputText.substr(charIndex, 4);
+				if(nextFourChars == '<BR>' || nextFourChars == '<br>') {
+					theChar = '<BR>';
+					charIndex += 3;
+				}
+				initString = initString + theChar + "<SPAN id='blink'>_</SPAN>";
+				document.getElementById('myContent').innerHTML = initString;
+				charIndex = charIndex / 1 + 1;
+				if(charIndex % 2 == 1) {
+					document.getElementById('blink').style.display = 'none';
+				} else {
+					document.getElementById('blink').style.display = 'inline';
+				}
+
+				if(charIndex <= stringLength) {
+					setTimeout('writeContent(false)', 150);
+				} else {
+					blinkSpan();
+				}
+			}
+			var currentStyle = 'inline';
+
+			function blinkSpan() {
+				if(currentStyle == 'inline') {
+					currentStyle = 'none';
+				} else {
+					currentStyle = 'inline';
+				}
+				document.getElementById('blink').style.display = currentStyle;
+				setTimeout('blinkSpan()', 500);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="myContent">
+		</div>
+		<div id="contentToWrite" style="display:none">
+			牛市傻逼么<br> password : ******<br> Access is granted<br>
+		</div>
+		<script type="text/javascript">
+			writeContent(true);
+		</script>
+
+	</body>
+
+</html>

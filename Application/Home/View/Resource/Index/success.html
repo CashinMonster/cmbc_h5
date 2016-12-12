@@ -1,0 +1,477 @@
+<include FILE="Index:header"/>
+		<style type="text/css">
+			*{
+				border: 0;
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/success/success_bg.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.class1{
+				display: none;
+			}
+			#main{
+				width: 100%;
+				height: 100%;
+				display: none;
+			}
+			.role{
+				width: 24%;
+				position: absolute;
+				right: 5%;
+				top: 5%;
+			}
+			.role img{
+				width: 100%;
+			}
+			.success{
+				width: 50%;
+				position: absolute;
+				left: 24%;
+				top: 38%;
+			}
+			.success img{
+				width: 100%;
+			}
+			.share{
+				width: 60%;
+				position: absolute;
+				left: 20%;
+				top: 60%;
+			}
+			.share img{
+				width: 100%;
+			}
+			.libao{
+				width: 60%;
+				position: absolute;
+				left: 20%;
+				top: 70%;
+			}
+			.libao img{
+				width: 100%;
+			}
+			.back{
+				width: 24%;
+				position: absolute;
+				bottom: 4%;
+				left: 38%;
+			}
+			.back img{
+				width: 100%;
+			}
+			#libao-list{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 30;
+				display: none;
+				overflow: hidden;
+			}
+			.list{
+				width: 100%;
+				height: 100%;
+			}
+			.listClose{
+				width: 20%;
+				height: 10%;
+				/*border: 1px solid red;*/
+				position: absolute;
+				top: 34%;
+				right: 6%;
+			}
+			.listClose img{
+				width: 50%;
+				position: absolute;
+				right: 25%;
+				top: 18%;
+			}
+			#libao-list ul{
+				width: 74%;
+				height: 22%;
+				position: fixed;
+				left: 15.5%;
+				top: 47%;
+				/*border: 1px solid red;*/
+				z-index: 50;
+				list-style: none;
+				overflow-y: scroll;
+			}
+			#libao-list ul li{
+				width: 96%;
+				height: 67%;
+				background: url("__PUBLIC__/images/index/listKuang.png") no-repeat;
+				background-size: 100% 100%;
+				margin-left: 2%;
+				margin-top: 8%;
+				display: table;
+				position: relative;
+			}
+			@media only screen and (min-height: 400px) and (max-height: 500px) {
+				#libao-list ul li{
+					width: 96%;
+					height: 80%;
+					background: url("__PUBLIC__/images/index/listKuang.png") no-repeat;
+					background-size: 100% 100%;
+					margin-left: 2%;
+					margin-top: 6%;
+					display: table;
+					position: relative;
+				}
+			}
+			.goods{
+				position: absolute;
+				left: 3%;
+				width: 40%;
+				top: 10%;
+			}
+			.goods img{
+				width: 100%;
+			}
+			.goods_info{
+				width: 52%;
+				height: 80%;
+				position: absolute;
+				right: 2%;
+				top: 0%;
+				/*border: 1px solid red;*/
+			}
+			.goods_info p{
+				width: 100%;
+				height: 14px;
+				font-size: 12px;
+				line-height: 14px;
+				color: #a86523;
+				text-align: center;
+				overflow: hidden;
+				margin-bottom: 3px;
+				font-weight: bold;
+			}
+			.goods_info p:nth-child(1){
+				margin-top: 6%;
+			}
+			@media only screen and (min-width: 400px) {
+				.goods_info p:nth-child(1){
+					margin-top: 10%;
+				};
+			}
+			@media only screen and (max-width: 340px) {
+				.goods_info p:nth-child(1){
+					margin-top: 4%;
+				};
+			}
+			.goods_info .quanma{
+				width: 100%;
+				/*height: 40px;*/
+			}
+			#libao-list a{
+				color: darkred;
+				text-decoration: none;
+				font-size: 12px;
+				font-weight: bold;
+				position: absolute;
+				bottom: 4%;
+				right: 2%;
+			}
+			.copy{
+				color: darkred;
+				font-size: 12px;
+				font-weight: bold;
+				position: absolute;
+				bottom: 4%;
+				left: 46%;
+			}
+			.spinner {
+			  width: 50px;
+			  height: 60px;
+			  text-align: center;
+			  font-size: 10px;
+			  position: absolute;
+			  left: 0;
+			  right: 0;
+			  top: 0;
+			  bottom: 0;
+			  margin: auto;
+			}
+
+			.spinner > div {
+			  background-color: #f5e7fd;
+			  height: 100%;
+			  width: 6px;
+			  display: inline-block;
+
+			  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+			  animation: stretchdelay 1.2s infinite ease-in-out;
+			}
+
+			.spinner .rect2 {
+			  -webkit-animation-delay: -1.1s;
+			  animation-delay: -1.1s;
+			}
+
+			.spinner .rect3 {
+			  -webkit-animation-delay: -1.0s;
+			  animation-delay: -1.0s;
+			}
+
+			.spinner .rect4 {
+			  -webkit-animation-delay: -0.9s;
+			  animation-delay: -0.9s;
+			}
+
+			.spinner .rect5 {
+			  -webkit-animation-delay: -0.8s;
+			  animation-delay: -0.8s;
+			}
+
+			@-webkit-keyframes stretchdelay {
+			  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+			  20% { -webkit-transform: scaleY(1.0) }
+			}
+
+			@keyframes stretchdelay {
+			  0%, 40%, 100% {
+			    transform: scaleY(0.4);
+			    -webkit-transform: scaleY(0.4);
+			  }  20% {
+			    transform: scaleY(1.0);
+			    -webkit-transform: scaleY(1.0);
+			  }
+			}
+			#share_list{
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.6);
+				position: absolute;
+				display: none;
+			}
+			.shareImg{
+				width: 100%;
+				position: absolute;
+				right: 0%;
+				top: -10%;
+			}
+			.shareImg img{
+				width: 100%;
+			}
+			#role_list{
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.6);
+				position: absolute;
+				display: none;
+			}
+			.role_list_bg{
+				width: 90%;
+				height: 80%;
+				position: absolute;
+				left: 5%;
+				top: 10%;
+				background-color: #e3e3e3;
+				border-radius: 8px;
+			}
+			.role_list_container{
+				width: 86%;
+				height: 94%;
+				/*border: 1px solid red;*/
+				margin-left: 7%;
+				margin-top: 5%;
+			}
+			.role_title{
+				width: 90%;
+				margin-left: 5%;
+			}
+			.role_title img{
+				width: 100%;
+			}
+			.close1{
+				width: 10%;
+				position: absolute;
+				right: 5%;
+				top: 2%;
+			}
+			.close1 img{
+				width: 100%;
+			}
+			#role_list_box{
+				width: 100%;
+				height: 88%;
+				/*border: 1px solid red;*/
+				margin-top: 3%;
+				overflow-y: scroll;
+			}
+			#role_list_box img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="class1">
+			<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="role">
+				<img src="__PUBLIC__/images/index/role.png"/>
+			</div>
+			<div class="success animated zoomIn">
+				<img src="__PUBLIC__/images/success/success.png"/>
+			</div>
+			<div class="share">
+				<img src="__PUBLIC__/images/fail/share.png"/>
+			</div>
+			<div class="libao">
+				<img src="__PUBLIC__/images/success/libao.png"/>
+			</div>
+			<div class="back">
+				<a href="{:U('index/index')}">
+					<img src="__PUBLIC__/images/success/back.png"/>
+				</a>
+			</div>
+			<div id="share_list">
+				<div class="shareImg">
+					<img src="__PUBLIC__/images/success/shareImg.png"/>
+				</div>
+			</div>
+			<div id="role_list">
+				<div class="role_list_bg">
+					<div class="role_list_container">
+						<div class="role_title">
+							<img src="__PUBLIC__/images/index/a_role.png"/>
+						</div>
+						<div class="close1">
+							<img src="__PUBLIC__/images/index/close.png"/>
+						</div>
+						<ul class="scroll" id="role_list_box" style="overflow:scroll; -webkit-overflow-scrolling: touch; ">
+							<img src="__PUBLIC__/images/index/role_list.png"/>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<if condition="!empty($present)">
+				<div id="libao-list">
+					<img src="__PUBLIC__/images/index/list.png" class="list"/>
+					<div class="listClose">
+						<img src="__PUBLIC__/images/index/close.png" />
+					</div>
+					<ul>
+						<volist name="present" id="vo" >
+							<li>
+								<div class="goods">
+									<img src="__PUBLIC__/images/index/{$vo.img}" alt="" />
+								</div>
+								<div class="goods_info">
+									<p>{$vo.name}</p>
+									<if condition="$vo.code != ''">
+										<p class="quanma" >券码:<span contentEditable=true id="active{$vo.id}">{$vo.code}</span></p>
+									</if>
+									<p class="end_date">截止日期:<span>{$vo.offlinetime}</span></p>
+								</div>
+								<if condition="$vo.gid eq 3||$vo.gid eq 4">
+									<a href="#">请等待客服联系</a>
+								<else/>
+									<a href="{$vo.url}">立即使用>></a>
+								</if>
+								<if condition="$vo.code != ''">
+									<button class="copy" data-clipboard-action="copy" data-clipboard-target="#active{$vo.id}">复制券码</button>
+								</if>
+							</li>
+						</volist>
+					</ul>
+				</div>
+			</if>
+		</div>
+	</body>
+	<script src="__PUBLIC__/js/jquery-2.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/js/loading.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var arr = ["__PUBLIC__/images/success/shares.jpg","__PUBLIC__/images/success/success_bg.png","__PUBLIC__/images/index/listKuang.png","__PUBLIC__/images/index/role.png","__PUBLIC__/images/success/success.png","__PUBLIC__/images/fail/share.png","__PUBLIC__/images/success/libao.png","__PUBLIC__/images/success/back.png","__PUBLIC__/images/index/list.png","__PUBLIC__/images/index/close.png"];
+		loadingFn({
+			imgArr:arr,
+			loadingProceed:function (index,imgArr){
+				$(".class1").show();
+				$("#main").hide();
+			},
+			loadingOver:function (imgArr){
+				$(".class1").hide();
+				$("#main").show();
+				//解决遮盖层与底层滑动问题
+				var overscroll = function(el) {
+				  el.addEventListener('touchstart', function() {
+				    var top = el.scrollTop
+				      , totalScroll = el.scrollHeight
+				      , currentScroll = top + el.offsetHeight;
+				    if(top === 0) {
+				      el.scrollTop = 1;
+				    } else if(currentScroll === totalScroll) {
+				      el.scrollTop = top - 1;
+				    }
+				  })
+				  el.addEventListener('touchmove', function(evt) {
+				    if(el.offsetHeight < el.scrollHeight)
+				      evt._isScroller = true;
+				  })
+				}
+				overscroll(document.querySelector('.scroll'));
+				document.body.addEventListener('touchmove', function(evt) {
+				  if(!evt._isScroller) {
+				    evt.preventDefault();
+				  }
+				})
+
+				$(".libao").click(function (){
+					$("#libao-list").show();
+				});
+				$(".listClose").click(function (){
+					$("#libao-list").hide();
+				});
+
+				//---------------------------判断手机--------------------------------------
+				var u = navigator.userAgent;
+				var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+				//android终端
+				var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+				//ios终端
+				//alert('是否是Android：'+isAndroid);
+				//alert('是否是iOS：'+isiOS);
+				if (isAndroid){
+					$(".copy").hide();
+				}
+
+				//-------------------------复制功能实现-------------------------------------
+				var clipboard = new Clipboard('.copy');
+			    clipboard.on('success', function(e) {
+			        console.log(e);
+			    });
+			    clipboard.on('error', function(e) {
+			        console.log(e);
+			    });
+			    
+			    $(".role").click(function (){
+			    	$("#role_list").show();
+			    });
+			     $(".close1").click(function (){
+			    	$("#role_list").hide();
+			    });
+			     $(".share").click(function (){
+			    	$("#share_list").show();
+			    });
+			     $("#share_list").click(function (){
+			    	$("#share_list").hide();
+			    });
+			}
+		});
+	</script>
+</html>

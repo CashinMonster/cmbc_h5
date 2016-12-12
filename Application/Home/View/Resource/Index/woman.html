@@ -1,0 +1,484 @@
+<include FILE="Index:header"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typing.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/woman.css"/>
+		<style type="text/css">
+			@font-face {
+				font-family: fz; /*这里是说明调用来的字体名字*/
+				src: url("__PUBLIC__/css/W1.TTF"); /*这里是字体文件路径*/
+			}
+			.scene1_bg{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/woman/scene1_bg.jpg") no-repeat;
+				background-size: 100% 100%;
+			}
+			.s0{
+				background: url("__PUBLIC__/images/woman/s0.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.s1{
+				background: url("__PUBLIC__/images/woman/s1.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.scene2_bg{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/woman/scene2_bg.jpg") no-repeat;
+				background-size: 100% 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.woman{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url("__PUBLIC__/images/woman/woman.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.visitor{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url("__PUBLIC__/images/woman/visitor.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.scene3{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/woman/scene3_bg.jpg") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w0{
+				background: url("__PUBLIC__/images/woman/w0.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w1{
+				background: url("__PUBLIC__/images/woman/w1.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w2{
+				background: url("__PUBLIC__/images/woman/w2.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w3{
+				background: url("__PUBLIC__/images/woman/w3.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w4{
+				background: url("__PUBLIC__/images/woman/w4.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w5{
+				background: url("__PUBLIC__/images/woman/w5.png") no-repeat;
+				background-size: 100% 100%;
+			}.w6{
+				background: url("__PUBLIC__/images/woman/w6.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.w7{
+				background: url("__PUBLIC__/images/woman/w7.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.scene4{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/woman/scene4_bg.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.cat{
+				width: 10%;
+				height: 10%;
+				position: absolute;
+				top: 13.5%;
+				left:66%;
+				background: url("__PUBLIC__/images/woman/cat.png");
+				background-size: 400% 100%;
+				-webkit-animation: auto-circle 2s steps(4) infinite;
+				animation: auto-circle 2s steps(4) infinite;
+				z-index: 999;
+			}
+			.print{
+				width: 27.75%;
+				height: 21%;
+				position: absolute;
+				top: 36.5%;
+				left:0%;
+				background: url("__PUBLIC__/images/woman/print.png");
+				background-size: 300% 100%;
+				-webkit-animation: auto-circle1 1.5s steps(3) infinite;
+				animation: auto-circle1 1.5s steps(3) infinite;
+				z-index: 999;
+			}
+			.scene5{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/woman/scene5_bg.jpg") no-repeat;
+				background-size: 100% 100%;
+			}
+			.jinli{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url("__PUBLIC__/images/woman/scene5_p.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.rili{
+				width: 29%;
+				height: 20%;
+				position: absolute;
+				top: 57.5%;
+				left:32%;
+				background: url("__PUBLIC__/images/woman/taili.png");
+				background-size: 100% 7100%;
+				z-index: 999;
+			}
+			.scene6{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/woman/scene6_bg.jpg") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m0{
+				background: url("__PUBLIC__/images/woman/m0.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m1{
+				background: url("__PUBLIC__/images/woman/m1.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m2{
+				background: url("__PUBLIC__/images/woman/m2.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m3{
+				background: url("__PUBLIC__/images/woman/m3.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m4{
+				background: url("__PUBLIC__/images/woman/m4.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m5{
+				background: url("__PUBLIC__/images/woman/m5.png") no-repeat;
+				background-size: 100% 100%;
+			}.m6{
+				background: url("__PUBLIC__/images/woman/m6.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.m7{
+				background: url("__PUBLIC__/images/woman/m7.png") no-repeat;
+				background-size: 100% 100%;
+			}
+			.source,.output-wrap{
+				color: #333;
+				font-size: 12px;
+				line-height: 26px;
+				padding-top: 9px;
+				font-family: fz;
+				position: absolute;
+				bottom: 0;
+				left: 1%;
+				z-index: 10000;
+				width: 98%;
+				height: 15%;
+				background: url("__PUBLIC__/images/man/kuang.png") no-repeat;
+				background-size: 100% 100%;
+				text-indent: 1rem;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 350px) {
+				.source,.output-wrap{
+					font-size: 14px;
+					padding-top: 15px;
+				}
+			}
+			@media only screen and (min-width: 360px) and (max-width: 400px) {
+				.source,.output-wrap{
+					font-size: 18px;
+					padding-top: 22px;
+				}
+				.clickBtn a {
+				    text-decoration: none;
+				    color: indianred;
+				    font-family: fz;
+				    font-size: 22px;
+				}
+			}
+			@media only screen and (min-width: 401px) and (max-width: 450px) {
+				.source,.output-wrap{
+					font-size: 20px;
+					padding-top: 30px;
+				}
+				.clickBtn a {
+				    text-decoration: none;
+				    color: indianred;
+				    font-family: fz;
+				    font-size: 24px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="class1">
+			<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+			</div>
+		</div>
+		<audio src="__PUBLIC__/music/bg.mp3" autoplay="autoplay" loop="loop"></audio>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide scene1">
+		        	<div class="scene1_bg ani" ></div>
+		        	<div class="ani scene1_cheers" swiper-animate-effect="fadeIn">
+		        		<div class="ss s0 show"></div>
+		        		<div class="ss s1"></div>
+		        	</div>
+		        	<div class="arrow ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="4s">
+		        		<img src="__PUBLIC__/images/man/arrow1.png" />
+		        	</div>
+		        	<div class="source ziyuan">
+		        		<span>每一年的生日愿望都希望赚很多钱孝敬爸妈。据说集齐二十个，就能愿望成真！</span>
+		        	</div>
+		        	<div class="output-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+	                    <p class="output shuchu"></p>
+	                    <!--<span class="typing-cursor-white">|</span>-->
+	                </div>
+		        </div>
+		        <div class="swiper-slide scene2">
+		        	<div class="scene2_bg"></div>
+		        	<div class="woman ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay=".8s"></div>
+		        	<div class="visitor ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+		        	<div class="arrow ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="4s">
+		        		<img src="__PUBLIC__/images/man/arrow1.png" />
+		        	</div>
+		        	<div class="source ziyuan">
+		        		<span>从小有制服情节，希望当空姐或在银行工作。如今在民生银行上海分行圆梦。</span>
+		        	</div>
+		        	<div class="output-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+	                    <p class="output shuchu"></p>
+	                    <!--<span class="typing-cursor-white">|</span>-->
+	                </div>
+		        </div>
+		        <div class="swiper-slide scene3">
+		        	<div class="ww w0 show"></div>
+		        	<div class="ww w1"></div>
+		        	<div class="ww w2"></div>
+		        	<div class="ww w3"></div>
+		        	<div class="ww w4"></div>
+		        	<div class="ww w5"></div>
+		        	<div class="ww w6"></div>
+		        	<div class="ww w7"></div>
+		        	<div class="arrow ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="4s">
+		        		<img src="__PUBLIC__/images/man/arrow1.png" />
+		        	</div>
+		        	<div class="source ziyuan">
+		        		<span>分行举行点钞比赛，经过日夜苦练，成功维护学霸的尊严。</span>
+		        	</div>
+		        	<div class="output-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+	                    <p class="output shuchu"></p>
+	                    <!--<span class="typing-cursor-white">|</span>-->
+	                </div>
+		        </div>
+		        <div class="swiper-slide scene4">
+		        	<div class="cat"></div>
+		        	<div class="print"></div>
+		        	<div class="arrow ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="4s">
+		        		<img src="__PUBLIC__/images/man/arrow1.png" />
+		        	</div>
+		        	<div class="source ziyuan">
+		        		<span>有的人喜欢“李嘉欣”，我喜欢听到“你加薪”。永远记得第一次升级加薪的心情！</span>
+		        	</div>
+		        	<div class="output-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+	                    <p class="output shuchu"></p>
+	                    <!--<span class="typing-cursor-white">|</span>-->
+	                </div>
+		        </div>
+		        <div class="swiper-slide scene5">
+		        	<div class="jinli ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"></div>
+		        	<div class="rili"></div>
+		        	<div class="arrow ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="4s">
+		        		<img src="__PUBLIC__/images/man/arrow1.png" />
+		        	</div>
+		        	<div class="spinner1">
+					  <div class="double-bounce1"></div>
+					  <div class="double-bounce2"></div>
+					</div>
+					<div class="spinner2">
+					  <div class="double-bounce1"></div>
+					  <div class="double-bounce2"></div>
+					</div>
+					<div class="spinner3">
+					  <div class="double-bounce1"></div>
+					  <div class="double-bounce2"></div>
+					</div>
+		        	<div class="source ziyuan">
+		        		<span>从柜台能手到理财精英,终于实现最完美的转型！</span>
+		        	</div>
+		        	<div class="output-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+	                    <p class="output shuchu"></p>
+	                    <!--<span class="typing-cursor-white">|</span>-->
+	                </div>
+		        </div>
+		        <div class="swiper-slide scene6">
+		        	<div class="mm m0 show"></div>
+		        	<div class="mm m1"></div>
+		        	<div class="mm m2"></div>
+		        	<div class="mm m3"></div>
+		        	<div class="mm m4"></div>
+		        	<div class="mm m5"></div>
+		        	<div class="mm m6"></div>
+		        	<div class="mm m7"></div>
+		        	<div class="clickBtn ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="4s">
+		        		<a href="{:U('index/libao')}">
+		        			<img src="__PUBLIC__/images/man/jiang1.png" style="width: 18%;"/>
+		        			点击领奖
+		        		</a>
+		        	</div>
+		        	<div class="source ziyuan">
+		        		<span>分行奖励的优秀员工家庭旅游，话说女神经的我如今在爸妈眼里成为了他们的骄傲！</span>
+		        	</div>
+		        	<div class="output-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+	                    <p class="output shuchu"></p>
+	                    <!--<span class="typing-cursor-white">|</span>-->
+	                </div>
+		        </div>
+		    </div>
+		    <!--如果需要分页器-->
+		    <!--<div class="swiper-pagination"></div>-->
+
+		    <!-- 如果需要导航按钮 -->
+		    <!--<div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>-->
+
+		    <!-- 如果需要滚动条 -->
+		    <!--<div class="swiper-scrollbar"></div>-->
+		</div>
+
+	</body>
+	<script src="__PUBLIC__/js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/js/loading.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/js/typing.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var arr = ["__PUBLIC__/images/man/jiang1.png","__PUBLIC__/images/woman/scene1_bg.jpg","__PUBLIC__/images/woman/s0.png","__PUBLIC__/images/woman/s1.png","__PUBLIC__/images/woman/scene2_bg.jpg"
+		,"__PUBLIC__/images/woman/woman.png","__PUBLIC__/images/woman/visitor.png","__PUBLIC__/images/woman/scene3_bg.jpg","__PUBLIC__/images/woman/w0.png"
+		,"__PUBLIC__/images/woman/w1.png","__PUBLIC__/images/woman/w2.png","__PUBLIC__/images/woman/w3.png","__PUBLIC__/images/woman/w4.png","__PUBLIC__/images/woman/w5.png"
+		,"__PUBLIC__/images/woman/w6.png","__PUBLIC__/images/woman/w7.png","__PUBLIC__/images/woman/scene6_bg.jpg","__PUBLIC__/images/woman/m0.png","__PUBLIC__/images/woman/m1.png"
+		,"__PUBLIC__/images/woman/m2.png","__PUBLIC__/images/woman/m3.png","__PUBLIC__/images/woman/m4.png","__PUBLIC__/images/woman/m5.png","__PUBLIC__/images/woman/m6.png"
+		,"__PUBLIC__/images/woman/m7.png","__PUBLIC__/images/woman/scene5_bg.jpg","__PUBLIC__/images/man/arrow1.png","__PUBLIC__/images/woman/scene5_p.png"
+		,"__PUBLIC__/images/woman/scene4_bg.png","__PUBLIC__/images/woman/print.png","__PUBLIC__/images/woman/cat.png","__PUBLIC__/images/woman/taili.png"];
+		loadingFn({
+			imgArr:arr,
+			loadingProceed:function (index,imgArr){
+				$(".class1").show();
+				$(".swiper-container").hide();
+			},
+			loadingOver:function (imgArr){
+				$(".class1").hide();
+				$(".swiper-container").show();
+				var outputWrap = document.querySelector('.output-wrap');
+				var outputs = document.querySelectorAll('.output');
+				var rili = document.querySelector(".rili");
+				var timer1 = null;
+				var mySwiper = new Swiper ('.swiper-container', {
+					direction: 'vertical',
+					speed:750,
+					resistanceRatio:0,
+					lazyLoading : true,
+					lazyLoadingInPrevNext : true,
+				 	onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+				   		swiperAnimateCache(swiper); //隐藏动画元素
+				    	swiperAnimate(swiper); //初始化完成开始动画
+					},
+					onSlideChangeEnd: function(swiper){
+					    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+					    for (var i=0; i<outputs.length;i++){
+					    	if (swiper.activeIndex == i){
+						    	var typing = new Typing({
+								    source: document.querySelectorAll('.source')[i],
+								    output: document.querySelectorAll('.output')[i],
+								    delay: 70
+								});
+								outputs[i].innerHTML = "";
+								clearTimeout(timer1);
+							   	timer1 = setTimeout(function (){
+							   		clearTimeout(timer1);
+									typing.start();
+								},500);
+						    }
+					    }
+					    if (swiper.activeIndex == 4){
+					    	rili.className = "rili rili_Dh";
+					    }else{
+					    	rili.className = "rili";
+					    }
+					}
+				});
+//				打字机效果
+				var typing = new Typing({
+				    source: document.querySelectorAll('.source')[0],
+				    output: document.querySelectorAll('.output')[0],
+				    delay: 70
+				});
+				outputs[0].innerHTML = "";
+				clearTimeout(timer2);
+				var timer2 = setTimeout(function (){
+					clearTimeout(timer2);
+					typing.start();
+				},500);
+				var divs = document.querySelectorAll(".ss");
+				var index = 0;
+				var autoTimer = setInterval(function (){
+
+					index++;
+					if (index>1){
+		//				index = 0;
+						clearInterval(autoTimer);
+						divs[0].className = "hide";
+						divs[1].className = "show ss s1";
+					}else{
+						divs[index].className = "show ss s"+index;
+					}
+					for (var i=0; i<divs.length-1; i++){
+						divs[i].className = "hide";
+					}
+
+				},1300);
+
+				var ws = document.querySelectorAll(".ww");
+				var ms = document.querySelectorAll(".mm");
+				var j = 0;
+				var autoTimer1 = setInterval(function (){
+
+					j++;
+					if (j>ws.length-1){
+						j = 0;
+					}
+					for (var i=0; i<ws.length; i++){
+						ws[i].className = "hide";
+						ms[i].className = "hide";
+					}
+					ws[j].setAttribute("class", "show ww w"+j);
+					ms[j].setAttribute("class", "show mm m"+j);
+				},300);
+			}
+		});
+
+
+
+
+
+	</script>
+</html>

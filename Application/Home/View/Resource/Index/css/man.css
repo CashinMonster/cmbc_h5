@@ -1,0 +1,774 @@
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+}
+audio{
+	width: 0%;
+	height: 0%;
+}
+/*@font-face { 
+	font-family: fz; 
+	src: url("../css/W1.TTF"); 
+} */
+.class1{
+	display: none;
+}
+.swiper-container{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.swiper-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+.scene1{
+	width: 100%;
+	height: 100%;
+	background-color: #f5e7fd;
+	overflow: hidden;
+}
+.guest1{
+	width: 40%;
+	position: absolute;
+	left: 0;
+	bottom: -2%;
+	z-index: 10;
+}
+.guest1 img{
+	width: 100%;
+}
+.guest2{
+	width: 33%;
+	position: absolute;
+	right: 0;
+	top: 7%;
+	z-index: 10;
+}
+.guest2 img{
+	width: 100%;
+}
+.guest3{
+	width: 25%;
+	position: absolute;
+	right: 2%;
+	bottom: -2%;
+	z-index: 10;
+}
+.guest3 img{
+	width: 100%;
+}
+.guest4{
+	width: 36%;
+	position: absolute;
+	left: 14%;
+	top: 12%;
+	z-index: 10;
+}
+.guest4 img{
+	width: 100%;
+}
+.guest5_1{
+	width: 19%;
+	position: absolute;
+	left: 40%;
+	bottom: 25%;
+	z-index: 30;
+}
+.guest5_1 img{
+	width: 100%;
+}
+.guest5_2{
+	width: 18%;
+	position: absolute;
+	right: 20%;
+	bottom: 25%;
+	z-index: 10;
+}
+.guest5_2 img{
+	width: 100%;
+}
+.beginBg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.beginBg img{
+	width: 100%;
+}
+.arrow{
+	width: 14%;
+	color: red;
+	position: absolute;
+	bottom: 2%;
+	z-index: 99999;
+	left: 50%;
+	margin-left: -7%;
+}
+.arrow img{
+	width: 100%;
+	-webkit-animation: moveUd 1s infinite 2.5s;
+	animation: moveUd 1s infinite 2.5s;
+}
+@-webkit-keyframes moveUd{
+	0% {
+		opacity: 1;
+    	-webkit-transform: translateY(0px);
+	}
+	25% {
+		opacity: 1;
+	    -webkit-transform: translateY(10px);
+	}
+	50% {
+	    -webkit-transform: translateY(20px);
+	}
+	75% {
+	    -webkit-transform: translateY(10px);
+	}
+	100% {
+	    -webkit-transform: translateY(0px);
+	}
+}
+@keyframes moveUd{
+	0% {
+		opacity: 1;
+    	transform: translateY(0px);
+	}
+	25% {
+		opacity: 1;
+	    transform: translateY(10px);
+	}
+	50% {
+	    transform: translateY(20px);
+	}
+	75% {
+	    transform: translateY(10px);
+	}
+	100% {
+	    transform: translateY(0px);
+	}
+}
+.scene2{
+	width: 100%;
+	height: 100%;
+	background-color: #f5e7fd;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	overflow: hidden;
+}
+.hezhao{
+	width: 100%;
+	height: 41.4%;
+	position: absolute;
+	top: 31.65%;
+	left: 2.5%;
+	z-index: 10;
+}
+.hezhao img{
+	width: 94%;
+	height: 94%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.play1{
+	-webkit-animation: rotate1 forwards;
+	animation: rotate1 forwards;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+}
+.play2{
+	-webkit-animation: rotate2 forwards;
+	animation: rotate2 forwards;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+}
+.hezhao1{
+	width: 50%;
+	position: absolute;
+	left: 2.5%;
+	top: 31.5%;
+	height: 20.7%;
+}
+.hezhao1 img{
+	width: 100%;
+	height: 100%;
+}
+.header{
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	right: 5%;
+	bottom: 0;
+}
+.header img{
+	width: 100%;
+	height: 100%;
+}
+@-webkit-keyframes rotate1{
+	0% {
+		-webkit-transform: perspective(400px) scale(1);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 1
+	}
+	100% {
+		-webkit-transform: perspective(400px) scale(0.53);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 1
+	}
+}
+@keyframes rotate1{
+	0% {
+		-webkit-transform: perspective(400px) scale(1);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 1
+	}
+	100% {
+		-webkit-transform: perspective(400px) scale(0.53);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 1
+	}
+}
+@-webkit-keyframes rotate2{
+	0% {
+		-webkit-transform: perspective(400px) scale(1);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 0
+	}
+	20%{
+		-webkit-transform: perspective(400px) scale(0.624);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 0
+	}
+	100% {
+		-webkit-transform: perspective(400px) scale(0.53);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 0
+	}
+}
+@keyframes rotate2{
+	0% {
+		-webkit-transform: perspective(400px) scale(1);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 0
+	}
+	20%{
+		-webkit-transform: perspective(400px) scale(0.624);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 0
+	}
+	100% {
+		-webkit-transform: perspective(400px) scale(0.53);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		opacity: 0
+	}
+}
+/*.scene2_bg{
+	width: 100%;
+	height: 100%;
+	background: url("../images/man/scene-2.jpg") no-repeat;
+	background-size: 100% 100%;
+}*/
+.yuangong{
+	width: 20%;
+	position: absolute;
+	right: 20%;
+	bottom: 10%;
+	/*display: none;*/
+}
+.yuangong img{
+	width: 100%;
+}
+/*.scene4{
+	width: 100%;
+	height: 100%;
+	background: url("../images/man/scene4_bg.png") no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}*/
+/*.jinji1{
+	width: 70%;
+	height: 30%;
+	position: absolute;
+	left: 30%;
+	top: 30%;
+	z-index: 10;
+	background: url("../images/man/jinji1.png") no-repeat;
+	background-size: 100% 100%;
+}*/
+.jinji1 img{
+	width: 100%;
+}
+.jinji2{
+	width: 90%;
+	position: absolute;
+	left: 20%;
+	top: 45%;
+	z-index: 10;
+}
+.jinji2 img{
+	width: 100%;
+}
+.jinji3{
+	width: 90%;
+	position: absolute;
+	left: 17%;
+	top: 60%;
+	z-index: 10;
+}
+.jinji3 img{
+	width: 100%;
+}
+.jinji4{
+	width: 90%;
+	position: absolute;
+	left: 17%;
+	top: 75%;
+	z-index: 10;
+}
+.jinji4 img{
+	width: 100%;
+}
+.people1{
+	width: 25%;
+	position: absolute;
+	top: 10%;
+	left: 60%;
+}
+.people1 img{
+	width: 100%;
+}
+.people2{
+	width: 30%;
+	position: absolute;
+	top: 18%;
+	left: 58%;
+}
+.people2 img{
+	width: 100%;
+}
+.people3{
+	width: 35%;
+	position: absolute;
+	top: 25%;
+	left: 48%;
+}
+.people3 img{
+	width: 100%;
+}
+.people4{
+	width: 40%;
+	position: absolute;
+	top: 32%;
+	left: 40%;
+}
+.people4 img{
+	width: 100%;
+}
+.people5{
+	width: 55%;
+	position: absolute;
+	top: 40%;
+	left: 32%;
+}
+.people5 img{
+	width: 100%;
+}
+.people6{
+	width: 65%;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+}
+.people6 img{
+	width: 100%;
+}
+.people7{
+	width: 70%;
+	position: absolute;
+	top: 60%;
+	left: 20%;
+}
+.people7 img{
+	width: 100%;
+}
+/*.scene5{
+	width: 100%;
+	height: 100%;
+	background: url("../images/man/scene5.jpg") no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}*/
+
+.deng{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.deng img{
+	width: 100%;
+}
+/*.scene6{
+	width: 100%;
+	height: 100%;
+	background: url("../images/man/scene6.jpg") no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}*/
+.scene6-dh{
+	width: 100%;
+	height: 100%;
+}
+.hh{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+/*.h0{
+	background: url("../images/man/h0.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h1{
+	background: url("../images/man/h1.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h2{
+	background: url("../images/man/h2.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h3{
+	background: url("../images/man/h3.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h4{
+	background: url("../images/man/h4.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h5{
+	background: url("../images/man/h5.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h6{
+	background: url("../images/man/h6.png") no-repeat;
+	background-size: 100% 100%;
+}
+.h7{
+	background: url("../images/man/h7.png") no-repeat;
+	background-size: 100% 100%;
+}*/
+.scene3{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.scene3_sky{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.scene3_sky_middle{
+	width: 99999px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.scene3_sky img{
+	/*width: 100%;*/
+	height: 100%;
+	float: left;
+}
+/*.scene3-dh{
+	width: 90%;
+	height: 50%;
+	position: absolute;
+	bottom: 0%;
+	left: -36%;
+	background: url("../images/man/run.png");
+	background-size: 900% 100%;
+	-webkit-animation: auto-circle 1s steps(9) infinite;
+	animation: auto-circle 1s steps(9) infinite;
+	z-index: 999;
+}*/
+
+/*.banjiang{
+	width: 100%;
+	height: 53%;
+	position: absolute;
+	top: 0%;
+	left: 2%;
+	background: url("../images/man/banjiang2.png");
+	background-size:1000% 100%;
+	-webkit-animation: auto-circle1 2s steps(10) infinite;
+	animation: auto-circle1 2s steps(10) infinite;
+	z-index: 999;
+}*/
+ @-webkit-keyframes auto-circle{
+    0%{
+      background-position-x: 900%;
+    }
+    100%{
+      background-position-x: 0px;
+    }
+}
+@keyframes auto-circle{
+    0%{
+      background-position-x: 900%;
+    }
+    100%{
+      background-position-x: 0px;
+    }
+}
+@-webkit-keyframes auto-circle1{
+    0%{
+      background-position-x: 1000%;
+    }
+    100%{
+      background-position-x: 0%;
+    }
+}
+@keyframes auto-circle1{
+    0%{
+      background-position-x: 1000%;
+    }
+    100%{
+      background-position-x: 0%;
+    }
+}
+.scene3_road{
+	width: 100%;
+	height: 14%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 990;
+}
+.scene3_road_middle{
+	width: 99999px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.scene3_road img{
+	height: 100%;
+	float: left;
+}
+.zhu{
+	height:42%;
+	width: 8%;
+	z-index: 100;
+}
+.zhu img{
+	height: 100%;
+	width: 100%;
+}
+.zhu1{
+	position: absolute;
+	z-index: 200;
+	left: 3%;
+	bottom: -15%;
+}
+.zhu2{
+	position: absolute;
+	z-index: 200;
+	left: 19%;
+	bottom: -8%;
+}
+.zhu3{
+	position: absolute;
+	z-index: 200;
+	left: 35%;
+	bottom: -6%;
+}
+.zhu4{
+	position: absolute;
+	z-index: 200;
+	left: 51%;
+	bottom: 0%;
+}
+.zhu5{
+	position: absolute;
+	z-index: 200;
+	left: 67%;
+	bottom: 5%;
+}
+.zhu6{
+	position: absolute;
+	z-index: 200;
+	left: 83%;
+	bottom: 13%;
+}
+.show{
+	display: block;
+	/*width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;*/
+}
+
+.hide{
+	display: none;
+}
+
+.spinner {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+ 
+.spinner > div {
+  background-color: #f5e7fd;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+/*.source,.output-wrap{
+	color: #333;
+	font-size: 16px;
+	line-height: 26px;
+	padding-top: 30px;
+	font-family: fz;
+	position: absolute;
+	bottom: 0;
+	left: 1%;
+	z-index: 10000;
+	width: 98%;
+	height: 15%;
+	background: url("../images/man/kuang.png") no-repeat;
+	background-size: 100% 100%;
+	text-indent: 2rem;
+}*/
+
+.source{
+	display: none;
+}
+.output{
+	width: 92%;
+	margin-left: 4%;
+	padding: 2px;
+	padding-bottom: 2px;
+}
+
+.clickBtn{
+	position: absolute;
+	bottom: 1%;
+	right:2%;
+	z-index: 999999999;
+}
+.clickBtn a{
+	text-decoration: none;
+	color: indianred;
+	font-family: fz;
+	font-size: 18px;
+}
+.target{
+	width: 16%;
+	position: absolute;
+	right: 5%;
+	top: 33%;
+	z-index: 9999999;
+	opacity: 0;
+}
+.target img{
+	width: 100%;
+}
+.yemu{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 20;
+	background-color: rgba(0,0,0,0.6);
+}
+.deng{
+	width: 50%;
+	position: absolute;
+	left: 25%;
+	top: 30%;
+	z-index: 100;
+	display: none;
+}

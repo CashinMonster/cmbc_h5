@@ -1,0 +1,128 @@
+<include FILE="Index:header"/>
+		<style type="text/css">
+			*{
+				border: 0;
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			.libao1{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/libao/libao1.jpg");
+				background-size: 100% 100%;
+			}
+			.lihua{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				/*display: none;*/
+				background: url("__PUBLIC__/images/libao/lb.png");
+				background-size: 400% 100%;
+				-webkit-animation: lihua 1.2s steps(3) forwards;
+				animation: lihua 1.2s steps(3) forwards;
+			}
+			@-webkit-keyframes lihua{
+			    0%{
+			      background-position-x: 400%;
+			    }
+			    100%{
+			      background-position-x: 100%;
+			    }
+			}
+			@keyframes lihua{
+			     0%{
+			      background-position-x: 400%;
+			    }
+			    100%{
+			      background-position-x: 100%;
+			    }
+			}
+			
+			.libao2{
+				width: 100%;
+				height: 100%;
+				background: url("__PUBLIC__/images/libao/libao2.jpg");
+				background-size: 100% 100%;
+				display: none;
+			}
+			.libao{
+				width: 60%;
+				position: absolute;
+				left: 20%;
+				top: 20%;
+			}
+			.libao img{
+				width: 100%;
+			}
+			.hand{
+				width: 15%;
+				height: 11%;
+				background: url("__PUBLIC__/images/libao/hand.png");
+				background-size: 200% 100%;
+				-webkit-animation: handShake .8s steps(2) infinite;
+				animation: handShake .8s steps(2) infinite;
+				position: absolute;
+				right: 23%;
+				top: 40%;
+				display: none;
+			}
+			@-webkit-keyframes handShake{
+			    0%{
+			      background-position-x: 200%;
+			    }
+			    100%{
+			      background-position-x: 0%;
+			    }
+			}
+			@keyframes handShake{
+			     0%{
+			      background-position-x: 200%;
+			    }
+			    100%{
+			      background-position-x: 0%;
+			    }
+			}
+			audio{
+				width: 0px;
+				height: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="libao1">
+			<div class="lihua"></div>
+			<audio src="__PUBLIC__/music/lihua1.mp3" autoplay="autoplay"></audio>
+		</div>
+		<div class="libao2">
+			<audio src="__PUBLIC__/music/libao.mp3"></audio>
+			<div class="libao animated bounceInDown">
+				<a href="{:U('Index/getPrize')}">
+					<img src="__PUBLIC__/images/libao/jiang.png"/>
+				</a>
+			</div>
+			<div class="hand animated fadeIn"></div>
+		</div>
+	</body>
+	<script src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">		
+		$(function (){
+			var audio1 = document.querySelector(".libao1 audio");
+			var audio2 = document.querySelector(".libao2 audio"); 
+			setTimeout(function (){
+				$(".libao1").hide();
+				$(".libao2").show();
+				audio1.pause();
+				audio2.play();
+			},3000);
+			setTimeout(function (){
+				$(".hand").show();
+			},3500);
+		});
+	</script>
+</html>

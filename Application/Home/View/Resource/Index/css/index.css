@@ -1,0 +1,394 @@
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+audio{
+	display: none;
+}
+/*#main_container{
+	width: 100%;
+	height: 100%;
+	background: url("../images/index/index-bg.png") no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#begining{
+	width: 100%;
+	height: 100%;
+	background: url("../images/index/begining1.png");
+	background-size: 9000% 100%;
+	-webkit-animation: auto-circle 5s steps(89) forwards;
+	animation: auto-circle 5s steps(89) forwards;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100000000;
+	display: none;
+}*/
+@-webkit-keyframes auto-circle{
+    0%{
+      background-position-x: 6000%;
+    }
+    100%{
+      background-position-x: 100%;
+    }
+}
+@keyframes auto-circle{
+     0%{
+      background-position-x: 6000%;
+    }
+    100%{
+      background-position-x: 100%;
+    }
+}
+#contain{
+	width: 100%;
+	height: 100%;
+}
+#man{
+	width: 40%;
+	height: 20%;
+	/*border: 1px solid red;*/
+	position: absolute;
+	right: 0;
+	top: 45%;
+}
+#woman{
+	width: 40%;
+	height: 20%;
+	/*border: 1px solid red;*/
+	position: absolute;
+	left: 0;
+	top: 45%;
+}
+/*#man span{
+	width: 65%;
+	height: 49%;
+	position: absolute;
+	right: 0;
+	top: 30%;
+	z-index: 10;
+	background: url(../images/index/manSelect.png) no-repeat;
+	background-size: 100% 100%;
+}
+#woman span{
+	width: 65%;
+	height: 49%;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	z-index: 10;
+	background: url(../images/index/womanSelect.png) no-repeat;
+	background-size: 100% 100%;
+}*/
+.manSelect{
+	width: 100%;
+	-webkit-animation: anniu 1.5s ease both infinite;
+	-o-animation: anniu 1.5s ease both infinite;
+	animation: anniu 1.5s ease both infinite;
+}
+.womanSelect{
+	width: 100%;
+	-webkit-animation: anniu 1.5s ease both infinite;
+	-o-animation: anniu 1.5s ease both infinite;
+	animation: anniu 1.5s ease both infinite;
+}
+.man{
+	width: 27%;
+	position: absolute;
+	bottom: 12%;
+	right: 22%;
+}
+.woman{
+	width: 65%;
+	position: absolute;
+	left: 7%;
+	bottom: 11%;
+}
+.libao{
+	width: 25%;
+	position: absolute;
+	bottom: 3%;
+	left: 5%;
+}
+.role{
+	width: 24%;
+	position: absolute;
+	right: 5%;
+	top: 10%;
+}
+.start{
+	width: 84%;
+	position: absolute;
+	left: 9%;
+	top: 20%;
+	animation-duration:1.5s;
+	-webkit-animation-duration: 1.5s;
+	animation-delay:1.5s;
+	-webkit-animation-delay: 1.5s;
+}
+
+@-webkit-keyframes anniu {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+  }
+}
+@keyframes anniu{
+	0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+  }
+}
+#libao-list{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 30;
+	display: none;
+	overflow: hidden;
+}
+.list{
+	width: 100%;
+	height: 100%;
+}
+.listClose{
+	width: 20%;
+	height: 10%;
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: 34%;
+	right: 6%;
+}
+.listClose img{
+	width: 50%;
+	position: absolute;
+	right: 25%;
+	top: 18%;
+}
+#libao-list ul{
+	width: 74%;
+	height: 22%;
+	position: fixed;
+	left: 15.5%;
+	top: 47%;
+	/*border: 1px solid red;*/
+	z-index: 50;
+	list-style: none;
+	overflow-y: scroll;
+}
+/*#libao-list ul li{
+	width: 96%;
+	height: 26%;
+	background: url("../images/index/listKuang.png") no-repeat;
+	background-size: 100% 100%;
+	margin-left: 2%;
+	margin-top: 6%;
+	display: table;
+	position: relative;
+}*/
+.goods{
+	position: absolute;
+	left: 3%;
+	width: 40%;
+	top: 10%;
+}
+.goods img{
+	width: 100%;
+}
+.goods_info{
+	width: 52%;
+	height: 80%;
+	position: absolute;
+	right: 2%;
+	top: 0%; 
+}
+.goods_info p{
+	width: 100%;
+	height: 14px;
+	font-size: 12px;
+	line-height: 14px;
+	color: #a86523;
+	text-align: left;
+	overflow: hidden;
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+.goods_info p:nth-child(1){
+	margin-top: 6%;
+}
+@media only screen and (min-width: 400px) {
+	.goods_info p:nth-child(1){
+		margin-top: 10%;
+	};
+}
+@media only screen and (max-width: 340px) {
+	.goods_info p:nth-child(1){
+		margin-top: 4%;
+	};
+}
+.goods_info .quanma{
+	width: 100%;
+	/*height: 40px;*/
+}
+#libao-list a{
+	color: darkred;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 4%;
+	right: 2%;
+}
+.copy{
+	color: darkred;
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 4%;
+	left: 46%;
+}
+@media only screen and (min-width: 360px) and (max-width: 420px) {
+	#libao-list a{
+		color: darkred;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: bold;
+		position: absolute;
+		bottom: 12%;
+		right: 2%;
+	}
+	.copy{
+		color: darkred;
+		font-size: 12px;
+		font-weight: bold;
+		position: absolute;
+		bottom: 12%;
+		left: 46%;
+	}
+}
+#p-luck{
+	/*position:absolute;
+	left: 0%;
+	top: 0%; */
+	width:100%;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+	background-color: #803520;
+}
+#p-luck>ul{
+	margin-top: 0px;
+}
+#p-luck>ul>li{
+	height:40px;
+	list-style: none;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-family:"楷体";
+}
+/*.class1{
+	display: none;
+	width: 54%;
+	height: 30%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: url("../images/index/fire.png");
+	background-size: 400% 100%;
+	-webkit-animation: load 1s steps(4) infinite;
+	animation: load 1s steps(4) infinite;
+}*/
+@-webkit-keyframes load{
+    0%{
+      background-position-x: 400%;
+    }
+    100%{
+      background-position-x: 0px;
+    }
+}
+@keyframes load{
+    0%{
+      background-position-x: 400%;
+    }
+    100%{
+      background-position-x: 0px;
+    }
+}
+#role_list{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	position: absolute;
+	display: none;
+}
+.role_list_bg{
+	width: 90%;
+	height: 80%;
+	position: absolute;
+	left: 5%;
+	top: 10%;
+	background-color: #e3e3e3;
+	border-radius: 8px;
+}
+.role_list_container{
+	width: 86%;
+	height: 94%;
+	/*border: 1px solid red;*/
+	margin-left: 7%;
+	margin-top: 5%;
+}
+.role_title{
+	width: 90%;
+	margin-left: 5%;
+}
+.role_title img{
+	width: 100%;
+}
+.close1{
+	width: 10%;
+	position: absolute;
+	right: 5%;
+	top: 2%;
+}
+.close1 img{
+	width: 100%;
+}
+#role_list_box{
+	width: 100%;
+	height: 88%;
+	/*border: 1px solid red;*/
+	margin-top: 3%;
+	overflow-y: scroll;
+}
+#role_list_box img{
+	width: 100%;
+}

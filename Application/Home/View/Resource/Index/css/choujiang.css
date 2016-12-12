@@ -1,0 +1,57 @@
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	background: url("../images/choujiang/choujiang_bg.png") no-repeat;
+	background-size: 100% 100%;
+}
+.role{
+	width: 24%;
+	position: absolute;
+	right: 5%;
+	top: 5%;
+}
+.role img{
+	width: 100%;
+}
+.account{
+	width: 76.3%;
+	height: 6%;
+	position: absolute;
+	left: 13.8%;
+	top: 49%;
+	border-radius: 10px;
+	font-size: 16px;
+}
+.phoneNumber{
+	width: 76.3%;
+	height: 6%;
+	position: absolute;
+	left: 13.8%;
+	top: 65%;
+	border-radius: 10px;
+	font-size: 16px;
+}
+.kaihu{
+	width: 57.5%;
+	position: absolute;
+	top: 57%;
+	left: 13.8%;
+}
+.kaihu img{
+	width: 100%;
+}
+#submit{
+	width: 58%;
+	position: absolute;
+	left: 22%;
+	top: 77%;
+	
+}
+#submit img{
+	width: 100%;
+}

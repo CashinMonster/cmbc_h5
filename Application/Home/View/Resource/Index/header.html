@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>民生银行上海分行20周年庆</title>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate.min.css"/>
+    	<script src="__PUBLIC__/js/jweixin-1.0.0.js" type="text/javascript"></script>
+		<!--测试用监测代码-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?0de53c8729a56ea4cea0703f9e11dbf2";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<!--正式服务器监测代码-->
+		<!--<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?33bc64a28427f58de74c518ddd5d718d";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>-->
+
+
+		<script type="text/javascript">
+
+	 // if($("#controllerName").val() !='Indexindex'){
+		 wx.config({
+				 debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				 appId: '{$sign_package.appId}', // 必填，公众号的唯一标识
+				 timestamp: '{$sign_package.timestamp}', // 必填，生成签名的时间戳
+				 nonceStr: '{$sign_package.nonceStr}', // 必填，生成签名的随机串
+				 signature: '{$sign_package.signature}',// 必填，签名，见附录1
+				 jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','hideMenuItems','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone','onOpenAddress']// 必填，需要使用的JS接口列表
+		 });
+
+		 wx.ready(function () {
+				 wx.onMenuShareTimeline({
+						 title: '{$SHARE["title"]}', // 分享标题
+						 link: '{$SHARE["link"]}', // 分享链接
+						 imgUrl: '{$SHARE["imgUrl"]}', // 分享图标
+						 success: function () {
+							 // 用户确认分享后执行的回调函数
+							 var url  = "{:U('Index/share')}";
+							 $.get(url);
+						 },
+						 cancel: function () {
+								 // 用户取消分享后执行的回调函数
+						 }
+				 });
+
+				 wx.onMenuShareAppMessage({
+						 title: '{$SHARE["title"]}', // 分享标题
+						 desc: '{$SHARE["desc"]}', // 分享描述
+						 link: '{$SHARE["link"]}', // 分享链接
+						 imgUrl: '{$SHARE["imgUrl"]}', // 分享图标
+						 type: '', // 分享类型,music、video或link，不填默认为link
+						 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+						 success: function () {
+							 // 用户确认分享后执行的回调函数
+							 var url  = "{:U('Index/share')}";
+							 $.get(url);
+						 },
+						 cancel: function () {
+								 // 用户取消分享后执行的回调函数
+						 }
+				 });
+		 });
+	 //  }
+	 </script>
+	
+	
+
+
+
